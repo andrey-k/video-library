@@ -1,0 +1,85 @@
+.popup-box {
+  border-radius: 5px;
+  -webkit-box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2) 0 5px #aaaaaa;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2) 0 5px #aaaaaa;
+  position: absolute;
+  z-index: 9999999;
+  display: none;
+  background: #ffffff;
+  font-size: 14px;
+  font-family: Arial, sans-serif;
+}
+.popup-box .close {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  padding: 10px;
+  color: #434343;
+  font-weight: bold;
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  cursor: pointer;
+}
+.popup-box .close:hover {
+  color: #000000;
+}
+.popup-box h2 {
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+}
+.popup-box .top {
+  padding: 20px;
+  text-align: center;
+}
+.popup-box .bottom {
+  margin-bottom: 20px;
+  padding: 0;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  text-align: center;
+}
+.popup-box .bottom #id_rating {
+    display: none;
+}
+.popup-box .bottom #popup_star {
+    display: inline-block;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    text-align: left;
+    width: 70%;
+}
+.popup-box .bottom button {
+  margin: 0 15px;
+  width: 70px;
+}
+.popup-box .bottom .error-message {
+  display: none;
+  margin-top: 0;
+  color: #ff0000;
+}
+.popup-box ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+li {
+  width: 100%;
+}
+li label {
+  display: inline-block;
+  width: 20%;
+}
+li input {
+  display: inline-block;
+  width: 70%;
+}
+#blackout {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  display: none;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.3);
+}

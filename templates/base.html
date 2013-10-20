@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<!--[if lt IE 9]> <html class="no-js lt-ie9" lang="{{ LANGUAGE_CODE }}"> <![endif]-->
+<!--[if gt IE 8]><!--><html class="no-js" lang="en"><!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <title>MyDB</title>
+    <meta name="keywords" content="sqlite django" />
+    <meta name="description" content="simple video library with rating" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link href="{{ STATIC_URL }}css/font-awesome.min.css" rel="stylesheet">
+    <!--[if IE 7]>
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/font-awesome-ie7.min.css">
+    <![endif]-->
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+      <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+    <![endif]-->
+
+    <link href="{{ STATIC_URL }}css/base.css" rel="stylesheet" media="screen">
+    {% block extra_css %}{% endblock extra_css%}
+    {% block js_top %}{%endblock js_top %}
+  </head>
+  <body>
+    
+    {% block content %}{% endblock content%}
+    <div id="top"></div>
+    <div id="toTop">^</div>
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
+    {% block extra_js %}{% endblock extra_js %}
+    <script type="text/javascript">
+      $(document).ready(function(){
+        
+        {% block document_ready_js %}{% endblock document_ready_js %}
+
+        $(window).scroll(function() {
+          if($(this).scrollTop() != 0) {
+            $('#toTop').fadeIn(); 
+          } else {
+            $('#toTop').fadeOut();
+          }
+        });
+       
+        $('#toTop').click(function() {
+          $('body,html').animate({scrollTop:0},800);
+        });
+
+      });
+    </script>
+  </body>
+</html>

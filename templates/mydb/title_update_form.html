@@ -1,0 +1,31 @@
+{% block extra_js %}
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="{{ STATIC_URL }}js/jquery.raty.js"></script>
+    <script src="{{ STATIC_URL }}js/edit.js"></script>
+{% endblock extra_js %}
+
+{% block content %}
+    <div class="close">X</div>
+    <div class="top">
+        <h2>Fill in the data</h2>
+    </div>
+    <div class="bottom">
+        <form method="post" action="{% url update_title pk=title.pk %}">
+            {% csrf_token %}
+            
+            <ul>
+                <li><label for="id_name">Name:</label> {{ form.name }}</li>
+                <li><label for="id_year">Year:</label> {{ form.year }}</li>
+                <li><label for="id_director">Director:</label> {{ form.director }}</li>
+                <li><label for="id_rating">Rating:</label> {{ form.rating }}
+                <div id="popup_star" data-score="{{ title.rating }}" ></div></li>
+            </ul>
+            
+            <button id="yes" class="btn-primary" type="submit">Save</button>
+            <button id="no" class="btn-primary">Cancel</button>
+        </form>
+    </div>
+
+    
+{% endblock %}
+

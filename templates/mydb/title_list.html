@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+
+{% block extra_css %}
+    <link href="/static/css/popup.css" rel="stylesheet" media="screen">
+{% endblock extra_css %}
+
+{% block extra_js %}
+    <script src="{{ STATIC_URL }}js/jquery.raty.js"></script>
+    <script src="{{ STATIC_URL }}js/title.js"></script>
+    <script src="{{ STATIC_URL }}js/popup.js"></script>
+{% endblock extra_js %}
+{% block content %}
+
+<div class="db-block">
+    <div class="top-panel">
+        <div class="all-actions">
+            <button id="select-all" class="btn-primary">Select all</button>
+        </div>
+        <div class="sort">
+            <p>Sort by</p>
+            <button id="sort-title" class="btn-primary">Title</button>
+            <button id="sort-year" class="btn-primary disabled">Year</button>
+        </div>
+    </div>
+    <div class="table">
+        {% for title in titles%}
+            <div class="table-row">
+                <input type="checkbox" name="element" value="{{ title.pk }}" />
+                <p class="year">{{ title.year }}</p>
+                <p class="title">{{ title.name }} <span>({{ title.director }})</span></p>
+                <div class="star" data-score="{{ title.rating }}" ></div>
+                <div class="actions">
+                    <i class="icon-edit popup-link" title="Edit" data-method="edit"></i>
+                    <i class="icon-trash popup-link" title="Delete" data-method="delete"></i>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+    <div class="bottom-panel">
+        <button id="create" class="btn-primary popup-link" data-method="create">Add a new title</button>
+        <button id="delete-selected" class="btn-primary">Delete selected</button>
+    </div>
+    
+    <div class="popup-box" id="popup-box-edit" data-pk=1></div>
+    <div class="popup-box" id="popup-box" data-pk=1>
+        <div class="close">X</div>
+        <div class="top">
+            <h2>Do you really want to delete <i></i>?</h2>
+        </div>
+        <div class="bottom">
+            <p class='error-message'>That item cannot be deleted. Please try later.</p>
+            <button id="delete" class="btn-primary" type="submit">Yes</button>
+            <button id="no" class="btn-primary">No</button>
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}

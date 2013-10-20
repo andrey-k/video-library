@@ -1,0 +1,38 @@
+[
+  {
+    "pk": 1,
+    "model": "mydb.title",
+    "fields": {
+      "director": "Steven Lisberger",
+      "name": "Tron",
+      "year": 1982
+    }
+  },
+  {
+    "pk": 2,
+    "model": "mydb.title",
+    "fields": {
+      "director": "Joseph Kosinski",
+      "name": "Tron: Legacy",
+      "year": 2010
+    }
+  },
+  {
+    "pk": 3,
+    "model": "mydb.title",
+    "fields": {
+      "director": "Irvin Kershner",
+      "name": "Star Wars Episode V: The Empire Strikes Back",
+      "year": 1980
+    }
+  },
+  {
+    "pk": 8,
+    "model": "mydb.title",
+    "fields": {
+      "director": "James Cameron",
+      "name": "The Terminator",
+      "year": 1984
+    }
+  }
+]

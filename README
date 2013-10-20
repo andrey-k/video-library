@@ -1,0 +1,26 @@
+Video Library
+
+The application stores the titles of DVDs or CDs a person owns with ratings.
+
+== Using ==
+django
+.less
+bootstrap 2
+FontAwesome
+
+== Requirements ==
+python 2.7
+django-1.4 (or later)
+
+== Installation ==
+Go to the project directory and run
+
+  ./manage.py syncdb
+
+Populate the database by running
+
+  ./manage.py loaddata data 
+
+Run the server
+
+  ./manage.py runserver

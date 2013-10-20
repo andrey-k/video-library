@@ -1,0 +1,210 @@
+@font-face {
+  font-weight: normal;
+  font-style: normal;
+  font-family: 'Play';
+  src: url('../fonts/Play-Regular-webfont.eot');
+  src: url('../fonts/Play-Regular-webfont.eot?#iefix') format('embedded-opentype'), 
+       url('../fonts/Play-Regular-webfont.woff') format('woff'), 
+       url('../fonts/Play-Regular-webfont.ttf') format('truetype'), 
+       url('../fonts/Play-Regular-webfont.svg#PlayRegular') format('svg');
+}
+
+body {
+  color: #000000;
+  font-size: 15px;
+  font-family: 'Play';
+  line-height: 20px;
+}
+
+label,input,button,select,textarea {
+  font-family: 'Play';
+}
+
+.db-block {
+  margin: auto;
+  width: 720px;
+}
+
+.top-panel {
+  overflow: hidden;
+  padding: 10px 0;
+  width: 100%;
+}
+
+.top-panel .all-actions {
+  float: left;
+}
+
+.top-panel .sort {
+  float: right;
+}
+
+.sort p {
+  display: inline-block;
+  margin: 0;
+}
+
+.sort button {
+  width: 70px;
+}
+
+.btn-primary {
+  padding: 5px 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: #0066cc;
+
+  background-image: -webkit-linear-gradient(to bottom, #0088cc, #0044cc);
+  background-image: -moz-linear-gradient(to bottom, #0088cc, #0044cc);
+  background-image: -o-linear-gradient(to bottom, #0088cc, #0044cc);
+  background-image: -ms-linear-gradient(to bottom, #0088cc, #0044cc);
+  background-image: linear-gradient(to bottom, #0088cc, #0044cc);
+  background-repeat: repeat-x;
+
+  -webkit-box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25) 0 5px #aaaaaa;
+  box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25) 0 5px #aaaaaa;
+  color: #ffffff;
+  font-size: 14px;
+}
+
+.btn-primary:hover {
+  background-color: #0066cc;
+
+  background-image: -webkit-linear-gradient(to bottom, #0044cc, #0088cc);
+  background-image: -moz-linear-gradient(to bottom, #0044cc, #0088cc);
+  background-image: -o-linear-gradient(to bottom, #0044cc, #0088cc);
+  background-image: -ms-linear-gradient(to bottom, #0044cc, #0088cc);
+  background-image: linear-gradient(to bottom, #0044cc, #0088cc);
+  background-repeat: repeat-x;
+}
+
+.btn-primary.selected {
+  background-color: #0066cc;
+
+  background-image: -webkit-linear-gradient(to bottom, #0044cc, #0088cc);
+  background-image: -moz-linear-gradient(to bottom, #0044cc, #0088cc);
+  background-image: -o-linear-gradient(to bottom, #0044cc, #0088cc);
+  background-image: -ms-linear-gradient(to bottom, #0044cc, #0088cc);
+  background-image: linear-gradient(to bottom, #0044cc, #0088cc);
+  background-repeat: repeat-x;
+}
+
+.btn-primary.disabled {
+  background-color: #808080;
+
+  background-image: -webkit-linear-gradient(to bottom, #aaaaaa, #555555);
+  background-image: -moz-linear-gradient(to bottom, #aaaaaa, #555555);
+  background-image: -o-linear-gradient(to bottom, #aaaaaa, #555555);
+  background-image: -ms-linear-gradient(to bottom, #aaaaaa, #555555);
+  background-image: linear-gradient(to bottom, #aaaaaa, #555555);
+  background-repeat: repeat-x;
+}
+
+.btn-primary.disabled:hover {
+  background-color: #0066cc;
+
+  background-image: -webkit-linear-gradient(to bottom, #0044cc, #0088cc);
+  background-image: -moz-linear-gradient(to bottom, #0044cc, #0088cc);
+  background-image: -o-linear-gradient(to bottom, #0044cc, #0088cc);
+  background-image: -ms-linear-gradient(to bottom, #0044cc, #0088cc);
+  background-image: linear-gradient(to bottom, #0044cc, #0088cc);
+  background-repeat: repeat-x;
+}
+
+.table-row *,.bottom-panel * {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.table-row:nth-child(even) {
+  background: #ffffff;
+}
+
+.table-row:nth-child(odd) {
+  background: #eeeeee;
+}
+
+.table-row input {
+  width: 3%;
+}
+
+.table-row p {
+  margin: 5px 0;
+}
+
+.table-row p.year {
+  width: 6%;
+}
+
+.table-row p.title {
+  width: 70%;
+}
+
+.table-row p span {
+  color: #555555;
+}
+
+.table-row .star {
+  width: 12%;
+}
+
+.actions {
+  width: 6%;
+}
+
+.actions * {
+  text-align: center;
+  cursor: pointer;
+}
+
+.bottom-panel {
+  margin: 10px 0 20px;
+  height: 30px;
+}
+
+.bottom-panel button {
+  width: 20%;
+}
+
+.bottom-panel #create {
+  float: left;
+}
+
+.bottom-panel #delete-selected {
+  float: right;
+}
+
+.bottom-panel .paging {
+  width: 59%;
+  text-align: center;
+}
+
+.ui-tooltip {
+  position: absolute;
+  z-index: 9999;
+  padding: 3px;
+  max-width: 300px;
+  border-width: 2px;
+  background-color: #cccccc;
+
+  -webkit-box-shadow: 0 0 5px #aaaaaa;
+  box-shadow: 0 0 5px #aaaaaa;
+}
+
+#toTop {
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  display: none;
+  padding: 10px 5px 0;
+  width: 25px;
+  border: 1px solid #cccccc;
+  border-radius: 8px;
+  background: none repeat scroll 0 0 #eeeeee;
+  color: #0044cc;
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+  font-family: verdana;
+  cursor: pointer;
+}
